@@ -1,0 +1,24 @@
+{
+  "timeout": 60,
+  "native_limits": {
+    "ethereum": 0.2,
+    "gton": 1
+  },
+  "watch": [
+    {
+      "address": "0x767CE7FaF9f23fABe9791d3B0Ad84fF8932c1781",
+      "chains": ["ethereum"],
+      "meta": "Ethereum sequencer"
+    },
+    {
+      "address": "0xFFB809feEDedf49085faf13097944C0B706e6787",
+      "chains": ["ethereum"],
+      "meta": "Ethereum proposer"
+    },
+    {
+      "address": "0x19F0643aE5cb3e4a9Af746d3aA4A6A202535A66d",
+      "chains": ["gton"],
+      "meta": "Price feed writer"
+    }
+  ]
+}
