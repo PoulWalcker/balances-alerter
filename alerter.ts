@@ -199,7 +199,7 @@ export class Alerter {
 
   async simpleNotify(message: string) {
     console.log({ chat: this.targetChat });
-    // await this.bot.sendMessage(this.targetChat, message);
+    await this.bot.sendMessage(this.targetChat, message);
     console.log(this.targetChat, message);
   }
 
@@ -224,7 +224,7 @@ export class Alerter {
 
     console.log({ message });
 
-    // await this.bot.sendMessage(this.targetChat, message);
+    await this.bot.sendMessage(this.targetChat, message);
   }
 
   async start() {
