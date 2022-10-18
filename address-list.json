@@ -1,5 +1,5 @@
 {
-  "timeout": 60,
+  "timeout": 30,
   "native_limits": {
     "ethereum": 0.2,
     "gton": 1
