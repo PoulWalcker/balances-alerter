@@ -7,6 +7,7 @@ const ETHEREUM_NODE = process.env.ETHEREUM_RPC;
 export enum AvailableChains {
   Ethereum = 0,
   Gton,
+  TestGton,
 }
 
 export class Formatter {
@@ -16,6 +17,8 @@ export class Formatter {
         return AvailableChains.Ethereum;
       case "gton":
         return AvailableChains.Gton;
+      case "testGton":
+        return AvailableChains.TestGton;
       default:
         return null;
     }
@@ -27,6 +30,8 @@ export class Formatter {
         return "ethereum";
       case AvailableChains.Gton:
         return "gton";
+      case AvailableChains.TestGton:
+        return "testGton";
       default:
         return null;
     }
@@ -44,6 +49,8 @@ export class Formatter {
         return `https://mainnet.infura.io/v3/${ETHEREUM_NODE}`;
       case AvailableChains.Gton:
         return "https://rpc.gton.network/";
+      case AvailableChains.TestGton:
+        return "https://testnet.gton.network/";
     }
     return null;
   }

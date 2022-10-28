@@ -1,5 +1,5 @@
 {
-  "timeout": 30,
+  "timeout": 800,
   "native_limits": {
     "ethereum": 0.2,
     "gton": 1
@@ -17,8 +17,18 @@
     },
     {
       "address": "0x19F0643aE5cb3e4a9Af746d3aA4A6A202535A66d",
-      "chains": ["gton"],
-      "meta": "Price feed writer"
+      "chains": ["gton", "testGton"],
+      "meta": "Price feed writer #1"
+    },
+    {
+      "address": "0xec7B9ed2a28B912F3422954B7e736B63730ad622",
+      "chains": ["gton", "testGton"],
+      "meta": "Price feed writer #2"
+    },
+    {
+      "address": "0x971F89Bb7841a027fc731AeD20Aba13e1AecbBE9",
+      "chains": ["gton", "testGton"],
+      "meta": "PGame executor"
     }
   ]
 }
