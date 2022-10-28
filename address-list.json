@@ -2,7 +2,8 @@
   "timeout": 800,
   "native_limits": {
     "ethereum": 0.2,
-    "gton": 1
+    "gton": 1,
+    "testGton": 1
   },
   "watch": [
     {
