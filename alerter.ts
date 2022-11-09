@@ -168,12 +168,11 @@ export class Alerter {
       }
 
       // #2 now check erc20
-      for (let j = 0; j < watchRecord.erc20.length; i++) {
+      for (let j = 0; j < watchRecord.erc20.length; j++) {
         const record = watchRecord.erc20[j];
         const token = record.address;
 
         const nodeURL = Formatter.nodeProvider(record.chain);
-
         const { floatBalance } = await Checker.getTokenBalanceAndDecimals(
           token,
           watchRecord.address,

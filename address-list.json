@@ -1,9 +1,8 @@
 {
-  "timeout": 800,
+  "timeout": 950,
   "native_limits": {
     "ethereum": 0.2,
-    "gton": 1,
-    "testGton": 1
+    "testGton": 3
   },
   "watch": [
     {
@@ -17,19 +16,45 @@
       "meta": "Ethereum proposer"
     },
     {
-      "address": "0x19F0643aE5cb3e4a9Af746d3aA4A6A202535A66d",
-      "chains": ["gton", "testGton"],
-      "meta": "Price feed writer #1"
+      "address": "0x3b19D39253094f303aA6Bd6751121f6Ec70Fbb5A",
+      "chains": ["testGton"],
+      "meta": "Foresee oracle bot"
     },
     {
-      "address": "0xec7B9ed2a28B912F3422954B7e736B63730ad622",
-      "chains": ["gton", "testGton"],
-      "meta": "Price feed writer #2"
+      "address": "0xccC24B2F9754a89881Dce8a06b42ADC279b09A37",
+      "chains": ["testGton"],
+      "meta": "Foresee aggregator bot"
     },
     {
-      "address": "0x971F89Bb7841a027fc731AeD20Aba13e1AecbBE9",
-      "chains": ["gton", "testGton"],
-      "meta": "PGame executor"
+      "address": "0x62f2489f1840223bbF315768bC7FAE70D7DE5046",
+      "chains": ["testGton"],
+      "meta": "Foresee executor"
+    },
+    {
+      "address": "0xfAa83FdbE7bEe36dE6DCB750065270112E9a3654",
+      "chains": [],
+      "meta": "GCD faucet",
+      "erc20": [
+        {
+          "name": "GCD",
+          "min": 100,
+          "address": "0x1EF834d6D3694a932A2082678EDd543E3Eb3412b",
+          "chain": "goerli"
+        }
+      ]
+    },
+    {
+      "address": "0xBceB65916a02804aCfC32983A52b07F07e1C5477",
+      "chains": [],
+      "meta": "Claim contract for staking holders",
+      "erc20": [
+        {
+          "name": "GTON",
+          "min": 1000,
+          "address": "0xC1Be9a4D5D45BeeACAE296a7BD5fADBfc14602C4",
+          "chain": "fantom"
+        }
+      ]
     }
   ]
 }

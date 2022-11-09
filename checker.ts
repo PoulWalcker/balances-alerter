@@ -8,6 +8,8 @@ export enum AvailableChains {
   Ethereum = 0,
   Gton,
   TestGton,
+  Fantom,
+  Goerli,
 }
 
 export class Formatter {
@@ -19,6 +21,10 @@ export class Formatter {
         return AvailableChains.Gton;
       case "testGton":
         return AvailableChains.TestGton;
+      case "fantom":
+        return AvailableChains.Fantom;
+      case "goerli":
+        return AvailableChains.Goerli;
       default:
         return null;
     }
@@ -32,6 +38,10 @@ export class Formatter {
         return "gton";
       case AvailableChains.TestGton:
         return "testGton";
+      case AvailableChains.Fantom:
+        return "fantom";
+      case AvailableChains.Goerli:
+        return "goerli";
       default:
         return null;
     }
@@ -51,6 +61,10 @@ export class Formatter {
         return "https://rpc.gton.network/";
       case AvailableChains.TestGton:
         return "https://testnet.gton.network/";
+      case AvailableChains.Fantom:
+        return "https://rpc.ankr.com/fantom";
+      case AvailableChains.Goerli:
+        return `https://goerli.infura.io/v3/${ETHEREUM_NODE}`;
     }
     return null;
   }
