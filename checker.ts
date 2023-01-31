@@ -1,30 +1,27 @@
 import Big from "big.js";
 import { WatchConfig } from "./alerter";
-require("dotenv").config();
-
-const ETHEREUM_NODE = process.env.ETHEREUM_RPC;
 
 export enum AvailableChains {
-  Ethereum = 0,
-  Gton,
+  Gton = 0,
   TestGton,
   Fantom,
-  Goerli,
+  Bsc,
+  TestBsc,
 }
 
 export class Formatter {
   static fromCommand(chain: string): AvailableChains | null {
     switch (chain) {
-      case "ethereum":
-        return AvailableChains.Ethereum;
       case "gton":
         return AvailableChains.Gton;
       case "testGton":
         return AvailableChains.TestGton;
       case "fantom":
         return AvailableChains.Fantom;
-      case "goerli":
-        return AvailableChains.Goerli;
+      case "bsc":
+        return AvailableChains.Bsc;
+      case "testBsc":
+        return AvailableChains.TestBsc;
       default:
         return null;
     }
@@ -32,16 +29,16 @@ export class Formatter {
 
   static formatCommand(chain: AvailableChains): string | null {
     switch (chain) {
-      case AvailableChains.Ethereum:
-        return "ethereum";
       case AvailableChains.Gton:
         return "gton";
       case AvailableChains.TestGton:
         return "testGton";
       case AvailableChains.Fantom:
         return "fantom";
-      case AvailableChains.Goerli:
-        return "goerli";
+      case AvailableChains.Bsc:
+        return "bsc";
+      case AvailableChains.TestBsc:
+        return "testBsc";
       default:
         return null;
     }
@@ -55,16 +52,16 @@ export class Formatter {
     }
 
     switch (chain) {
-      case AvailableChains.Ethereum:
-        return `https://mainnet.infura.io/v3/${ETHEREUM_NODE}`;
       case AvailableChains.Gton:
         return "https://rpc.gton.network/";
       case AvailableChains.TestGton:
         return "https://testnet.gton.network/";
       case AvailableChains.Fantom:
         return "https://rpc.ankr.com/fantom";
-      case AvailableChains.Goerli:
-        return `https://goerli.infura.io/v3/${ETHEREUM_NODE}`;
+      case AvailableChains.Bsc:
+        return "https://bsc-dataseed2.binance.org";
+      case AvailableChains.TestBsc:
+        return "https://data-seed-prebsc-1-s3.binance.org:8545";
     }
     return null;
   }

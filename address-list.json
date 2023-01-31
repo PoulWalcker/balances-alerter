@@ -1,47 +1,61 @@
 {
-  "timeout": 950,
+  "timeout": 1800,
   "native_limits": {
-    "ethereum": 0.2,
-    "testGton": 3
+    "testGton": 3,
+    "bsc": 0.03,
+    "testBsc": 0.03,
+    "gton": 5
   },
   "watch": [
     {
-      "address": "0x767CE7FaF9f23fABe9791d3B0Ad84fF8932c1781",
-      "chains": ["ethereum"],
-      "meta": "Ethereum sequencer"
+      "address": "0x0dcFD1f9A44d924Fd457b696B457c142D7246Df7",
+      "chains": ["bsc"],
+      "meta": "BSC mainnet sequencer"
     },
     {
-      "address": "0xFFB809feEDedf49085faf13097944C0B706e6787",
-      "chains": ["ethereum"],
-      "meta": "Ethereum proposer"
+      "address": "0x903f787ab0D7634A221929781f767656Cf3F7B27",
+      "chains": ["bsc"],
+      "meta": "BSC mainnet proposer"
     },
     {
-      "address": "0x3b19D39253094f303aA6Bd6751121f6Ec70Fbb5A",
+      "address": "0x7638EDD77E3c35003d843d240BC00307b16bEEe1",
+      "chains": ["testBsc"],
+      "meta": "BSC testnet sequencer"
+    },
+    {
+      "address": "0x3feeDa3Cef83B48bc902B97D8862E24c665F006b",
+      "chains": ["testBsc"],
+      "meta": "BSC testnet proposer"
+    },
+    {
+      "address": "0xa0cA4b1B828ec60BEc6A728e04C53529b7a594C5",
       "chains": ["testGton"],
       "meta": "Foresee oracle bot"
     },
     {
-      "address": "0xccC24B2F9754a89881Dce8a06b42ADC279b09A37",
+      "address": "0x1bD26a3054C7B47CE4DCeE3E1078a2e3EdC34581",
       "chains": ["testGton"],
       "meta": "Foresee aggregator bot"
     },
     {
-      "address": "0x62f2489f1840223bbF315768bC7FAE70D7DE5046",
+      "address": "0x30D12054C0b201c65f6c59e0Ea21CEd6CDaD5448",
       "chains": ["testGton"],
       "meta": "Foresee executor"
     },
     {
-      "address": "0xfAa83FdbE7bEe36dE6DCB750065270112E9a3654",
-      "chains": [],
-      "meta": "GCD faucet",
-      "erc20": [
-        {
-          "name": "GCD",
-          "min": 100,
-          "address": "0x1EF834d6D3694a932A2082678EDd543E3Eb3412b",
-          "chain": "goerli"
-        }
-      ]
+      "address": "0xfcb7d7ec47180dE377CaCe7A7cC08B0862FDe28D",
+      "chains": ["gton"],
+      "meta": "Foresee oracle bot"
+    },
+    {
+      "address": "0xE8bcaa5C2E45A0eb4d47C587C3C8A446bdC80Dc5",
+      "chains": ["gton"],
+      "meta": "Foresee aggregator bot"
+    },
+    {
+      "address": "0x12AFd928F60Eebd36d471710F780c31F686202C0",
+      "chains": ["gton"],
+      "meta": "Foresee executor"
     },
     {
       "address": "0xBceB65916a02804aCfC32983A52b07F07e1C5477",
