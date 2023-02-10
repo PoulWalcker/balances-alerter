@@ -1,9 +1,9 @@
 {
   "timeout": 1800,
   "native_limits": {
-    "testGton": 3,
-    "bsc": 0.03,
-    "testBsc": 0.03,
+    "testGton": 20,
+    "bsc": 0.5,
+    "testBsc": 0.5,
     "gton": 20
   },
   "watch": [
