@@ -61,7 +61,7 @@ export class Formatter {
       case AvailableChains.Bsc:
         return "https://bsc-dataseed2.binance.org";
       case AvailableChains.TestBsc:
-        return "https://data-seed-prebsc-1-s3.binance.org:8545";
+        return "https://data-seed-prebsc-2-s1.binance.org:8545";
     }
     return null;
   }
